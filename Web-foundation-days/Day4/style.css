@@ -1,0 +1,23 @@
+:root {
+  --background: white;
+  --text: black;
+}
+
+body.dark {
+  --background: #222;
+  --text: white;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+.warning {
+  color: orange;
+}
+
+.over {
+  color: red;
+  font-weight: bold;
+}
