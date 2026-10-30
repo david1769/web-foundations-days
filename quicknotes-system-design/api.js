@@ -115,12 +115,10 @@ async function removeNote(noteId) {
       method: "DELETE",
     });
 
+    // JSONPlaceholder simulates DELETE responses, so this removes the note only from the current list.
     notes = notes.filter((note) => note.id !== noteId);
     renderNotes();
-    showStatus(
-      notes.length === 0 ? "No notes remain." : "Note deleted successfully.",
-      notes.length === 0 ? "empty" : "success"
-    );
+    showStatus("Note removed from this list; JSONPlaceholder does not persist changes.", "success");
   } catch (error) {
     showStatus(`Unable to delete note: ${error.message}`, "error");
   } finally {
