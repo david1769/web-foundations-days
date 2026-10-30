@@ -82,7 +82,7 @@ WHERE e.id IS NULL;
 UPDATE enrolments
 SET grade = 'C'
 WHERE student_id = 2 AND course_id = 3;
-
+git
 -- Verify the update
 SELECT s.name, c.title, e.grade
 FROM enrolments e
